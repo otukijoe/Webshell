@@ -729,7 +729,7 @@ elseif ($act == 'mysqladmin') {
 			$sql_query = isset($P['sql_query']) ? pde($P['sql_query']) : '';
 
 			if ($tablename && !$sql_query) {
-				$sql_query = "SELECT * FROM $tablename LIMIT 0, 3000";
+				$sql_query = "SELECT * FROM $tablename LIMIT 0, 3000000";
 			}
 			if ($tablename && $doing == 'structure') {
 				$sql_query = "SHOW FULL COLUMNS FROM $tablename;\n";
